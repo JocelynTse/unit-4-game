@@ -54,7 +54,7 @@
         wins++;
         $("#wins").text(wins);
         alert("You defeated the Crystal King!");
-
+        reset();
         } else if (total > random)  {
         losses++;
         $("#losses").text(losses);
@@ -63,11 +63,14 @@
     };
 
     function reset()    {
-        let random = Math.floor(Math.random() * 120) + 19;
-        let Red = Math.floor(Math.random() * 12) + 1;
-        let Yellow = Math.floor(Math.random() * 12) + 1;
-        let Green = Math.floor(Math.random() * 12) + 1;
-        let Blue = Math.floor(Math.random() * 12) + 1;
+        random = Math.floor(Math.random() * 120) + 19;
+        $("#random").text(random);
+        total = 0;
+        $("#total").text(total);
+        Red = Math.floor(Math.random() * 12) + 1;
+        Yellow = Math.floor(Math.random() * 12) + 1;
+        Green = Math.floor(Math.random() * 12) + 1;
+        Blue = Math.floor(Math.random() * 12) + 1;
     };
 
     };
